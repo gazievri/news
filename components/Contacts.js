@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native';
-import { globalStyles } from './styles/styles';
+import { globalStyles } from '../styles/styles';
 
 export const Contacts = () => {
 

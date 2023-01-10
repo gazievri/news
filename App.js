@@ -1,7 +1,7 @@
 import { useFonts } from 'expo-font';
 import { useCallback } from 'react';
-import { Main } from './components/Main';
 import * as SplashScreen from 'expo-splash-screen';
+import { MyStack } from './navigate';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,6 +20,6 @@ export default function App() {
   }
 
   return (
-    <Main />
+    <MyStack />
   );
 }
