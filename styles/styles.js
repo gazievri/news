@@ -10,6 +10,6 @@ export const globalStyles = StyleSheet.create({
         fontSize: 20,
         color: '#333',
         fontFamily: 'mt-bold',
-        textAlign: 'center'
+        textAlign: 'center',
     }
 })
