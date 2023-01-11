@@ -21,7 +21,7 @@ export const MyStack = () => {
                 backgroundColor: '#eb5d3d', height: 100
               },
               headerTitleStyle: {
-                fontWeight: 'light'
+                fontWeight: '400'
               }
             } 
           }
