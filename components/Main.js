@@ -11,6 +11,7 @@ import {
 import { globalStyles } from '../styles/styles';
 import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
+import { Form } from './Form';
 
 export const Main = ({ navigation }) => {
   const openPage = () => {
@@ -47,6 +48,16 @@ export const Main = ({ navigation }) => {
 
   const [isOpened, setIsOpened] = useState(false);
 
+  const addArticle = (article) => {
+    setNews((list) => {
+      article.id = Math.random().toString()
+      return [
+        article, ...list
+      ]
+    });
+    setIsOpened(false)
+  }
+
   return (
     <View style={globalStyles.main}>
       <Modal visible={isOpened}>
@@ -54,6 +65,7 @@ export const Main = ({ navigation }) => {
         <View style={globalStyles.main}>
            <Ionicons name="close" size={34} color="red" style={styles.iconClose} onPress={() => setIsOpened(false)} />
           <Text style={styles.title}>Форма добавления статей</Text>
+          <Form  addArticle={addArticle} />
         </View>
       </Modal>
       <Ionicons
